@@ -4,10 +4,10 @@
     </head>
     <body>
         <h1>What's happening with {{topic}}?</h1>
-        <div class="container"></div>
+        <div class="container">
             {% for i in range(length) %}
                 <div class="item">
-                    <p><a href={{links[i]}}><b>{{headlines[i]}}</b></a></p>
+                    <p><a href={{links[i]}}><b>{{headlines[i]}}</b></a> {{dates[i]}}</p>
                     <p>{{snippets[i]}}</p>
                 </div>
             {% endfor %}
