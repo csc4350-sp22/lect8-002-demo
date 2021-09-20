@@ -22,12 +22,14 @@ def get_article_data(keyword):
 
     headlines = []
     snippets = []
+    links = []
     dates = []
     try:
         articles = response_json["response"]["docs"]
         for article in articles:
             headlines.append(article["headline"]["main"])
             snippets.append(article["snippet"])
+            links.append(article["web_url"])
             dates.append(article["pub_date"])
     except KeyError:
         print("Couldn't fetch articles!")
@@ -35,5 +37,6 @@ def get_article_data(keyword):
     return {
         "headlines": headlines,
         "snippets": snippets,
+        "links": links,
         "dates": dates,
     }
