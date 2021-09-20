@@ -15,6 +15,7 @@ def main():
         headlines=data["headlines"],
         snippets=data["snippets"],
         dates=data["dates"],
+        links=data["links"],
     )
     # pass that data to an HTML template
 
